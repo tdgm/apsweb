@@ -25,7 +25,7 @@ public class MockingAluno {
     }
     
     private  List<Aluno> alunos;
-    private String itemBusca = null;
+    private int itemBusca = 0;
     
     
     
@@ -35,7 +35,7 @@ public class MockingAluno {
     
     
     
-    public void setItemBusca(String termo) {
+    public void setItemBusca(int termo) {
         this.itemBusca = termo;
     }
     
@@ -43,7 +43,7 @@ public class MockingAluno {
         List<Aluno> listaAlunos = new ArrayList<Aluno>();
         
         //Alterar para o caminho interno de sua maquina
-        String csvFile = "C:\\_Estudos\\unicarioca";
+        String csvFile = "C:\\_Estudos\\unicarioca\\apsweb\\alunos.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
@@ -61,9 +61,7 @@ public class MockingAluno {
                 aluno.setMatricula(Integer.parseInt(linhaAluno[0]));
                 aluno.setListaPresencas(simulaPresencas(10));
                 listaAlunos.add(aluno);
-        
-               
-
+  
             }
 
         } catch (FileNotFoundException e) {
@@ -84,14 +82,15 @@ public class MockingAluno {
         return listaAlunos;
     }
     
-        public List<Aluno> buscarAluno(String termo){
+        public List<Aluno> buscarAluno(int termo){
         
             
        List<Aluno> alunoBusca = new ArrayList<Aluno>();
-        if (termo != null){
+        if (termo != 0){
             
             for (Aluno aluno : alunos){
-                if (aluno.getNome().matches("(?i:.*" + termo +".*)")){
+                 
+                if (aluno.getMatricula() == termo){
  
                     alunoBusca.add(aluno);
                 }

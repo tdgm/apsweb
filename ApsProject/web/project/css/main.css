@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/11/2016, 22:30:56
+    Author     : Thiago
+*/
+
+.logo {
+    padding: 20px;
+}
+
+.logo img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.card .card-content .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.main {
+    padding-top: 30px;
+}
+
+.charts img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media(min-width: 992px){
+    
+    header, main, footer {
+        padding-left: 300px;
+    }
+    
+    .title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 20px auto;
+    }
+    
+    .card .card-content .card-title {
+        font-size: 1rem;
+    }
+    
+}
